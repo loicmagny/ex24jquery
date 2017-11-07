@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <script src='jquery-3.2.1.js'></script>
+  <title>Exercice 3</title>
+</head>
+<body>
+  <form>
+    <input type='text' name='' id='lastname'>Entrez votre nom</br>
+    <input type='text' name='' id='firstname'>Entrez votre prénom</br>
+    <input type='text' name='' id='mail'>Entrez votre adresse mail</br>
+    <input type='text' name='' id='phone'>Entrez votre numéro de téléphone</br>
+    <button type='button' name='button' id='btn'>Envoyer</button>
+  </form>
+  <script>
+  $("#btn").click(function(){
+    if(!/^([A-Z])$/.test('#lastname')) {
+      $("#lastname").css('border', '3px solid green')
+      console.log('ca marche')
+    }
+    else {
+      $("#lastname").css('border', '3px solid red')
+      console.log('marche pas')
+    }
+    if(!/^([A-Z])$/.test('#firstname')) {
+      $("#firstname").css('border', '3px solid green')
+    }
+    else {
+      $("#firstname").css('border', '3px solid red')
+    }
+    if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/.test('#mail')) {
+      $("#mail").css('border', '3px solid green')
+      console.log('ca marche')
+    }
+    else {
+      $("#mail").css('border', '3px solid red')
+      console.log('marche pas')
+    }
+    if(!/^[0-9]$/.test('#phone')) {
+      $("#phone").css('border', '3px solid green')
+      console.log('ca marche')
+    }
+    else {
+      $("#phone").css('border', '3px solid red')
+      console.log('marche pas')
+    }
+  });
+  </script>
+</body>
+</html>
